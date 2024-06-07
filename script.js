@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5261/api/contas', {
+            const response = await fetch('http://localhost:5261/api/conta', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchContas() {
         try {
-            const response = await fetch('http://localhost:5261/api/contas');
+            const response = await fetch('http://localhost:5261/api/conta');
             const contas = await response.json();
             contasList.innerHTML = '';
             contas.forEach(conta => {
