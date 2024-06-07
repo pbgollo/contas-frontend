@@ -62,6 +62,15 @@ button:hover {
     background-color: #0056b3;
 }
 
+#clearContasBtn {
+    background-color: #eb8d22;
+    margin-top: 1px;
+}
+
+#clearContasBtn:hover {
+    background-color: #d67900;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -74,8 +83,14 @@ ul {
 li {
     text-align: left;
     margin: 5px 0;
-    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
+    white-space: pre-line;
+}
+
+li span {
+    display: block;
+    padding-left: 12px;
+    line-height: 0.3;
 }

@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addContaForm = document.getElementById('addContaForm');
     const fetchContasBtn = document.getElementById('fetchContasBtn');
+    const clearContasBtn = document.getElementById('clearContasBtn');
     const contasList = document.getElementById('contasList');
+
+    clearContasBtn.addEventListener('click', () => {
+        contasList.innerHTML = ''; // Limpa o conteúdo da lista
+    });
 
     addContaForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -46,7 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
             contasList.innerHTML = '';
             contas.forEach(conta => {
                 const listItem = document.createElement('li');
-                listItem.textContent = `Nome: ${conta.nome}, Valor Original: ${conta.valorOriginal}, Valor Corrigido: ${conta.valorCorrigido}, Dias de Atraso: ${conta.diasAtraso}, Data de Pagamento: ${conta.dataPagamento}`;
+                listItem.innerHTML = `
+                <span><strong>Nome:</strong> ${conta.nome}</span>
+                <span><strong>Valor Original:</strong> ${conta.valorOriginal}</span>
+                <span><strong>Valor Corrigido:</strong> ${conta.valorCorrigido}</span>
+                <span><strong>Dias de Atraso:</strong> ${conta.diasAtraso}</span>
+                <span><strong>Data de Pagamento:</strong> ${conta.dataPagamento}</span>
+            `;
                 contasList.appendChild(listItem);
             });
         } catch (error) {
