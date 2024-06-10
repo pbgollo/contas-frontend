@@ -15,8 +15,10 @@ body {
 }
 
 .container {
+    display: flex;
+    justify-content: space-between; 
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -24,8 +26,20 @@ body {
     text-align: center;
 }
 
+.left-panel {
+    width: 48%; 
+}
+
+.right-panel {
+    width: 48%;
+}
+
 h1, h2 {
     color: #333;
+}
+
+.right-panel h1 {
+    margin-bottom: 35px;
 }
 
 form {
@@ -34,8 +48,9 @@ form {
 }
 
 label {
-    display: inline-block;
-    width: 150px;
+    display: block;
+    margin-bottom: -7px; 
+    font-size: 13px;
 }
 
 input, button {
@@ -54,6 +69,10 @@ button {
     width: auto; 
 }
 
+.button-container {
+    text-align: center;
+}
+
 button:hover {
     background-color: #45a049;
 }
@@ -68,18 +87,18 @@ button:hover {
 }
 
 #clearContasBtn {
-    background-color: #eb8d22;
+    background-color: #e25711;
     margin-top: 1px;
 }
 
 #clearContasBtn:hover {
-    background-color: #d67900;
+    background-color: #cc0700;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
-    max-height: 230px; 
+    max-height: 245px; 
     overflow-y: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -92,7 +111,7 @@ li {
     border-radius: 5px;
     background-color: #f9f9f9;
     white-space: pre-line;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 li span {
